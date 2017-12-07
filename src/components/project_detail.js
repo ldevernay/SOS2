@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 
 export default (props) => {
-    return (
-        <div>
-            Voici votre beau projet!
+
+    if (!this.props.project) {
+        return (
+            <div>
+                Sélectionnez un projet pour commencer
             </div>
-    );
+        );
+    } else {
+        
+    }
 }
