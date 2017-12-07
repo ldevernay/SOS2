@@ -7,7 +7,9 @@ export default function (state = [], action) {
 
         default:
             return [
-                    { repo: 'JGuiraud/SeriousGame-FRMJC' }
+                    { repo: 'JGuiraud/SeriousGame-FRMJC' },
+                    { repo: 'JGuiraud/projet_siteMaraichage'},
+                    { repo: 'ldevernay/Office-Tourisme'}
                 ];
             break;
     }
