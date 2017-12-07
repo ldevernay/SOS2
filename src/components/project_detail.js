@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-export default (props) => {
-
+export default () => {
     if (!this.props.project) {
         return (
             <div>
@@ -9,6 +8,6 @@ export default (props) => {
             </div>
         );
     } else {
-        
+
     }
 }

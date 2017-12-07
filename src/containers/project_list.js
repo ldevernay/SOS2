@@ -15,11 +15,11 @@ class ProjectList extends Component {
     renderList() {
         return this.props.projects.map((project) => {
             return (
-                <li key={project.name}>
-                    {project.name}
+                <li key={project.repo}>
+                    {project.repo}
                 </li>
-            )
-        })
+            );
+        });
     }
 }
 
@@ -29,9 +29,11 @@ function mapStateToProps(state) {
     };
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({
-        selectProject: selectProject
-    }, dispatch);
-}
-export default connect((mapStateToProps, mapDispatchToProps), ProjectList);
+// function mapDispatchToProps(dispatch) {
+//     return bindActionCreators({
+//         selectProject: selectProject
+//     }, dispatch);
+// }
+// export default connect((mapStateToProps, mapDispatchToProps), ProjectList);
+
+export default connect(mapStateToProps)(ProjectList);
