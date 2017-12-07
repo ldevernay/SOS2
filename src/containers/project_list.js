@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import fetchProject from '../actions/index';
+import selectProject from '../actions/index';
 import { bindActionCreators } from 'redux';
 
 class ProjectList extends Component {
@@ -9,13 +9,15 @@ class ProjectList extends Component {
             <ul>
                 {this.renderList()}
             </ul>
-        )
+        );
     }
 
     renderList() {
         return this.props.projects.map((project) => {
             return (
-                <li key={project.repo}>
+                <li
+                    key={project.repo}
+                    onClick={() => { this.props.selectProject(project) }}>
                     {project.repo}
                 </li>
             );
@@ -29,11 +31,10 @@ function mapStateToProps(state) {
     };
 }
 
-// function mapDispatchToProps(dispatch) {
-//     return bindActionCreators({
-//         selectProject: selectProject
-//     }, dispatch);
-// }
-// export default connect((mapStateToProps, mapDispatchToProps), ProjectList);
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({
+        selectProject: selectProject
+    }, dispatch);
+}
+export default connect((mapStateToProps, mapDispatchToProps), ProjectList);
 
-export default connect(mapStateToProps)(ProjectList);
