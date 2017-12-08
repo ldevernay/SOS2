@@ -9,7 +9,6 @@ describe('getProject function', () => {
     it('fetches something', () => {
         getProject(project).payload
             .then((response) => {
-                console.log(response);
                 expect(response).to.exist;
             })
             .catch((error) => {
@@ -20,7 +19,6 @@ describe('getProject function', () => {
     it('fetches the appropriate repo', () => {
         getProject(project).payload
             .then((response) => {
-                console.log(response);
                 expect(response.data.name).to.equal('Office-tourisme');
             })
             .catch((error) => {
