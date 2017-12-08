@@ -6,9 +6,11 @@ import { bindActionCreators } from 'redux';
 class ProjectList extends Component {
     render() {
         return (
-            <ul>
-                {this.renderList()}
-            </ul>
+            <div className="listGroup col-sm-4">
+                <ul>
+                    {this.renderList()}
+                </ul>
+            </div>
         );
     }
 
@@ -16,9 +18,10 @@ class ProjectList extends Component {
         return this.props.projects.map((project) => {
             return (
                 <li
+                    className="list-group-item"
                     key={project.repo}
                     onClick={() => { this.props.getProject(project) }}
-                    >
+                >
                     {project.repo}
                 </li>
             );

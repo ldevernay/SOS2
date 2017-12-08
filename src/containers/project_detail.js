@@ -3,15 +3,26 @@ import { connect } from 'react-redux';
 
 class ProjectDetail extends Component {
     render() {
-        if (!this.props.project) {
+        let project = this.props.project;
+        if (!project) {
             return (
-                <div>Sélectionnez un projet pour commencer</div>
+                <div className="col-sm-8">Sélectionnez un projet pour commencer</div>
             );
         }
 
         return (
-            <div>
-                <h2>Détails pour le projet : {this.props.project.data.name}</h2>
+            <div className="card col-sm-8">
+                <div className="card-header">
+                    {project.data.name}
+                </div>
+                <div className="card-body">
+                    <p className="card-text">
+                    {project.data.description}
+                    </p>
+                    <a href={project.data.html_url} className="btn btn-primary">
+                        Go to Github repo
+                </a>
+                </div>
             </div>
         );
     }
