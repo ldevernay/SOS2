@@ -16,31 +16,15 @@ class ProjectDetail extends Component {
                     {project.data.name}
                 </div>
                 <div className="card-body info">
-                    <div className="project-status">
-                        <a href={project.data.html_url} role="button">
-                            <p title="Stars">
-                                <i aria-hidden="true" className="fa fa-star fa-fw"></i>
-                                {project.data.stargazers_count}
-                            </p>
-                            <p title='Watching'>
-                                <i aria-hidden='true' className='fa fa-eye fa-fw' />
-                                {project.data.watchers_count}
-                            </p>
-                            <p title='Forks'>
-                                <i aria-hidden='true' className='fa fa-code-fork fa-fw' />
-                                {project.data.forks_count}
-                            </p>
-                        </a>
-                    </div>
                     <p className="card-text">
                         {project.data.description}
                     </p>
 
                     {project.data.license &&
-                    <p className="card-text">
-                        License : {project.data.license.spdx_id}
-                    </p>}
-                    
+                        <p className="card-text">
+                            License : {project.data.license.spdx_id}
+                        </p>}
+
                     <div className="row">
                         <div className="col-sm-5">
                             <a href={project.data.html_url} className="btn repo">
@@ -54,6 +38,24 @@ class ProjectDetail extends Component {
                         </div>
                     </div>
                 </div>
+
+                <div className="project-status">
+                    <a href={project.data.html_url} role="button">
+                        <p title="Stars">
+                            <i aria-hidden="true" className="fa fa-star fa-fw"></i>
+                            {project.data.stargazers_count}
+                        </p>
+                        <p title='Watching'>
+                            <i aria-hidden='true' className='fa fa-eye fa-fw' />
+                            {project.data.watchers_count}
+                        </p>
+                        <p title='Forks'>
+                            <i aria-hidden='true' className='fa fa-code-fork fa-fw' />
+                            {project.data.forks_count}
+                        </p>
+                    </a>
+                </div>
+
             </div>
         );
     }
