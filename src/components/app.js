@@ -5,7 +5,7 @@ import ProjectList from '../containers/project_list'
 export default class App extends Component {
   render() {
     return (
-      <div className="row">
+      <div className="row app">
         <ProjectList />
         <ProjectDetail />
       </div>
