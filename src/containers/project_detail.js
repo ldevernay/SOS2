@@ -12,16 +12,25 @@ class ProjectDetail extends Component {
 
         return (
             <div className="card col-sm-8">
-                <div className="card-header">
+                <div className="title">
                     {project.data.name}
                 </div>
-                <div className="card-body">
+                <div className="card-body info">
                     <p className="card-text">
-                    {project.data.description}
+                        {project.data.description}
                     </p>
-                    <a href={project.data.html_url} className="btn btn-primary">
-                        Go to Github repo
+                    <div className="row">
+                        <div className="col-sm-5">
+                            <a href={project.data.html_url} className="btn repo">
+                                Go to Github repo
                 </a>
+                        </div>
+                        <div className="col-sm-5 col-sm-offset-2">
+                            <a href={project.data.html_url} className="btn repo">
+                                Go to live demo
+                </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

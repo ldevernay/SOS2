@@ -1,0 +1,27 @@
+.title {
+    font-weight: 600;
+    text-decoration: none;
+    color: #d51c21;
+}
+
+.info {
+    flex-direction: column;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    padding: 0 2em;
+    padding-top: 3.2em;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.repo {
+    background-color: #d51c21;
+    color: white;
+    font-weight: bold !important;
+}
+
+.projects {
+    cursor: pointer;
+    flex-direction: column;
+    font-weight: bold;
+}
