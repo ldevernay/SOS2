@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {selectProject} from '../actions/index';
+import { getProject } from '../actions/index';
 import { bindActionCreators } from 'redux';
 
 class ProjectList extends Component {
@@ -17,7 +17,7 @@ class ProjectList extends Component {
             return (
                 <li
                     key={project.repo}
-                    onClick={() => { this.props.selectProject(project) }}
+                    onClick={() => { this.props.getProject(project) }}
                     >
                     {project.repo}
                 </li>
@@ -34,7 +34,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
-        selectProject: selectProject
+        getProject: getProject
     }, dispatch);
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectList);

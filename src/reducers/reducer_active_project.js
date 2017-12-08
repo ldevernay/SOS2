@@ -1,8 +1,8 @@
-import {SELECT_PROJECT} from '../actions/index';
+import {GET_PROJECT} from '../actions/index';
 
 export default function (state = null, action) {
     switch (action.type) {
-        case SELECT_PROJECT:
+        case GET_PROJECT:
             return action.payload;
             break;
 

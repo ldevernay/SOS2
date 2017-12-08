@@ -11,7 +11,7 @@ class ProjectDetail extends Component {
 
         return (
             <div>
-                <h2>Détails pour le projet : {this.props.project.repo}</h2>
+                <h2>Détails pour le projet : {this.props.project.data.name}</h2>
             </div>
         );
     }
