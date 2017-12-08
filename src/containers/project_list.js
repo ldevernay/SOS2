@@ -17,7 +17,8 @@ class ProjectList extends Component {
             return (
                 <li
                     key={project.repo}
-                    onClick={() => { this.props.selectProject(project) }}>
+                    onClick={() => { this.props.selectProject(project) }}
+                    >
                     {project.repo}
                 </li>
             );
@@ -36,5 +37,5 @@ function mapDispatchToProps(dispatch) {
         selectProject: selectProject
     }, dispatch);
 }
-export default connect((mapStateToProps, mapDispatchToProps), ProjectList);
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectList);
 
