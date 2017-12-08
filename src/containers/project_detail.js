@@ -22,6 +22,14 @@ class ProjectDetail extends Component {
                                 <i aria-hidden="true" className="fa fa-star fa-fw"></i>
                                 {project.data.stargazers_count}
                             </p>
+                            <p title='Watching'>
+                                <i aria-hidden='true' className='fa fa-eye fa-fw' />
+                                {project.data.watchers_count}
+                            </p>
+                            <p title='Forks'>
+                                <i aria-hidden='true' className='fa fa-code-fork fa-fw' />
+                                {project.data.forks_count}
+                            </p>
                         </a>
                     </div>
                     <p className="card-text">
