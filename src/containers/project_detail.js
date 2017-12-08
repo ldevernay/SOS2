@@ -35,6 +35,12 @@ class ProjectDetail extends Component {
                     <p className="card-text">
                         {project.data.description}
                     </p>
+
+                    {project.data.license &&
+                    <p className="card-text">
+                        License : {project.data.license.spdx_id}
+                    </p>}
+                    
                     <div className="row">
                         <div className="col-sm-5">
                             <a href={project.data.html_url} className="btn repo">
