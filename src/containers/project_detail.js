@@ -16,6 +16,14 @@ class ProjectDetail extends Component {
                     {project.data.name}
                 </div>
                 <div className="card-body info">
+                    <div className="project-status">
+                        <a href={project.data.html_url} role="button">
+                            <p title="Stars">
+                                <i aria-hidden="true" className="fa fa-star fa-fw"></i>
+                                {project.data.stargazers_count}
+                            </p>
+                        </a>
+                    </div>
                     <p className="card-text">
                         {project.data.description}
                     </p>

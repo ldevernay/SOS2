@@ -11,12 +11,6 @@
     color: #212121;
   }  
 
-.title {
-    font-weight: 600;
-    text-decoration: none;
-    color: #d51c21;
-}
-
 .info {
     flex-direction: column;
     -ms-flex: 1 1 0%;
@@ -27,14 +21,30 @@
     justify-content: space-between;
 }
 
-.repo {
-    background-color: #d51c21;
-    color: white;
-    font-weight: bold !important;
+.project-status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 15px;
+    padding-bottom: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .projects {
     cursor: pointer;
     flex-direction: column;
     font-weight: bold;
+}
+
+.repo {
+    background-color: #d51c21;
+    color: white;
+    font-weight: bold !important;
+}
+
+.title {
+    font-weight: 600;
+    text-decoration: none;
+    color: #d51c21;
 }
