@@ -18,7 +18,7 @@ class ProjectList extends Component {
         return this.props.projects.map((project) => {
             return (
                 <li
-                    className="list-group-item" 
+                    className="list-group-item project" 
                     key={project.repo}
                     onClick={() => { this.props.getProject(project) }}
                 >
