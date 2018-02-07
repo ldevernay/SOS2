@@ -28,8 +28,8 @@ class ProjectDetail extends Component {
                     <div className="row">
                         <div className="col-sm-5">
                             <a href={project.data.html_url} className="btn repo">
-                                Go to Github repo
-                </a>
+                                <i className="fab fa-github"></i>
+                            </a>
                         </div>
                         <div className="col-sm-5 col-sm-offset-2">
                             <a href={project.data.html_url} className="btn repo">
