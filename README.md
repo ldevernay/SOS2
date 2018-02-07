@@ -26,8 +26,8 @@ Bootstrap, React/Redux, Github API and here we go!
 
 ### Branches
 There three branches : 
-* master : code which is deployed in production.
-* staging : code which is deployed in pre-production to be tested.
+* master : code which is deployed in production [none yet].
+* staging : code which is deployed in pre-production [-> Heroku] to be tested.
 * dev : the branch for all contributors to push on.
 
 
