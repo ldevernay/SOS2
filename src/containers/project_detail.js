@@ -11,7 +11,7 @@ class ProjectDetail extends Component {
         }
 
         return (
-            <div className="card col-sm-8">
+            <div className="col-sm-8">
                 <div className="title">
                     {project.data.name}
                 </div>

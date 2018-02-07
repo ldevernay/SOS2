@@ -43,9 +43,6 @@
 
 .title {
     padding: 0.75em;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #D51C21;
     border-radius: 8px 8px 0 0;
     background-color: #D51C21;
     font-weight: bold !important;
