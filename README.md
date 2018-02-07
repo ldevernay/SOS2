@@ -24,4 +24,10 @@ Bootstrap, React/Redux, Github API and here we go!
 * As a user, I can check at a glance which are the languages used on a project. 
 * As an administrator/dev, it is easy for me to add a new project. 
 
+### Branches
+There three branches : 
+* master : code which is deployed in production.
+* staging : code which is deployed in pre-production to be tested.
+* dev : the branch for all contributors to push on.
+
 
