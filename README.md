@@ -30,4 +30,6 @@ There three branches :
 * staging : code which is deployed in pre-production [-> Heroku] to be tested.
 * dev : the branch for all contributors to push on.
 
+Tests are automatically run after each push, with Travis CI.
+
 
