@@ -23,7 +23,13 @@
 }
 
 .project {
-    word-wrap: break-wrap;
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    word-wrap: break-word;
+    border: 0.1em solid #D51C21;
 }
 
 .projects {
