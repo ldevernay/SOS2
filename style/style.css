@@ -19,6 +19,7 @@
     padding-top: 3.2em;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    border: 0.1em solid #D51C21;
 }
 
 .project {
