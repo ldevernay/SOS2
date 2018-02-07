@@ -50,7 +50,7 @@ class ProjectDetail extends Component {
                             {project.data.watchers_count}
                         </p>
                         <p title='Forks'>
-                            <i aria-hidden='true' className='fa fa-code-fork fa-fw' />
+                            <i aria-hidden='true' className='fas fa-code-branch' />
                             {project.data.forks_count}
                         </p>
                     </a>
