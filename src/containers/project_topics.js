@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class ProjectTopics extends Component {
     render() {
         return (
-            <div className="listGroup topics">
+            <div className="listGroup">
                 {this.renderTopicsList()}
             </div>
         );

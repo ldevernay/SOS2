@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class ProjectLanguages extends Component {
     render() {
         return (
-            <div className="listGroup languages">
+            <div className="listGroup">
                 {this.renderLanguagesList()}
             </div>
         );
