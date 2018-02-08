@@ -4,10 +4,8 @@ import { connect } from 'react-redux';
 class ProjectLanguages extends Component {
     render() {
         return (
-            <div className="listGroup col-sm-4 projects">
-                <ul>
-                    {this.renderLanguagesList()}
-                </ul>
+            <div className="listGroup col-sm-4 languages">
+                {this.renderLanguagesList()}
             </div>
         );
     }
@@ -16,16 +14,14 @@ class ProjectLanguages extends Component {
         let languages = this.props.languages;
         if (!languages) {
             return (
-                <li>
-                    None
-                    </li>
+                <div>None</div>
             )
         } else {
             return Object.keys(languages.data).map((language) => {
                 return (
-                    <li key={language}>
+                    <span className="badge badge-pill badge-secondary" key={language} >
                         {language}
-                    </li>
+                    </span>
                 );
             });
         }
