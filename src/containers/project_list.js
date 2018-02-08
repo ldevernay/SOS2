@@ -40,5 +40,6 @@ function mapDispatchToProps(dispatch) {
         getProject: getProject
     }, dispatch);
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectList);
 

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ProjectLanguages from './project_languages';
+import { getProjectLanguages } from '../actions/index';
+import { bindActionCreators } from 'redux';
 
 class ProjectDetail extends Component {
     render() {
@@ -37,6 +40,8 @@ class ProjectDetail extends Component {
                             License : {project.data.license.spdx_id}
                         </p>}
 
+                        <ProjectLanguages languages={this.props.getProjectLanguages(project.data.full_name)}/>
+
                     <div className="row">
                         <div className="col-sm-5">
                             <a href={project.data.html_url} className="btn repo" title="Github repo">
@@ -60,5 +65,11 @@ function mapStateToProps(state) {
         project: state.activeProject
     };
 }
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({
+        getProjectLanguages: getProjectLanguages
+    }, dispatch);
+}
 
-export default connect(mapStateToProps)(ProjectDetail);
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectDetail);
+// export default connect(mapStateToProps)(ProjectDetail);
