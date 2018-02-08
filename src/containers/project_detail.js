@@ -40,7 +40,7 @@ class ProjectDetail extends Component {
                             License : {project.data.license.spdx_id}
                         </p>}
 
-                        <ProjectLanguages languages={this.props.getProjectLanguages(project.data.full_name)}/>
+                    <ProjectLanguages languages={this.props.getProjectLanguages(project.data.full_name)} />
 
                     <div className="row">
                         <div className="col-sm-5">
@@ -48,7 +48,7 @@ class ProjectDetail extends Component {
                                 <i className="fab fa-github link-icon"></i>
                             </a>
                         </div>
-                        <div className="col-sm-5 col-sm-offset-2">
+                        <div className="col-sm-5">
                             <a href={this.props.demo} className="btn repo" title="Live demo">
                                 <i className="fas fa-desktop link-icon"></i>
                             </a>
