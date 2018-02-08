@@ -22,7 +22,7 @@ class ProjectList extends Component {
                     key={project.repo}
                     onClick={() => { this.props.getProject(project) }}
                 >
-                    {project.repo}
+                    {project.name}
                 </li>
             );
         });

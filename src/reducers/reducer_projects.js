@@ -5,9 +5,18 @@ export default function (state = [], action) {
 
         default:
             return [
-                { repo: 'JGuiraud/SeriousGame-FRMJC' },
-                { repo: 'JGuiraud/projet_siteMaraichage' },
-                { repo: 'ldevernay/Office-Tourisme' }
+                {   
+                    name: "Serious game SVE",
+                    repo: 'JGuiraud/SeriousGame-FRMJC', 
+                    demo:'http://instinctive-road.surge.sh/' 
+                },
+                { 
+                    name: "Appli maraîcher",
+                    repo: 'JGuiraud/projet_siteMaraichage' },
+                { 
+                    name: "Carte interactive + photothèque",
+                    repo: 'ldevernay/Office-Tourisme' 
+                }
             ];
             break;
     }

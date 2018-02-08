@@ -44,7 +44,7 @@ class ProjectDetail extends Component {
                             </a>
                         </div>
                         <div className="col-sm-5 col-sm-offset-2">
-                            <a href={project.data.html_url} className="btn repo" title="Live demo">
+                            <a href={this.props.demo} className="btn repo" title="Live demo">
                                 <i className="fas fa-desktop link-icon"></i>
                             </a>
                         </div>
