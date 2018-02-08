@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ProjectLanguages from './project_languages';
 import { getProjectLanguages } from '../actions/index';
+import ProjectTopics from './project_topics';
+import { getProjectTopics } from '../actions/index';
 import { bindActionCreators } from 'redux';
 
 class ProjectDetail extends Component {
@@ -30,7 +32,13 @@ class ProjectDetail extends Component {
                         </a>
                     </div>
                 </div>
+
                 <div className="card-body info">
+
+                    <ProjectLanguages languages={this.props.getProjectLanguages(project.data.full_name)} />
+
+                    <ProjectTopics topics={this.props.getProjectTopics(project.data.full_name)} />
+
                     <p className="card-text">
                         {project.data.description}
                     </p>
@@ -39,8 +47,6 @@ class ProjectDetail extends Component {
                         <p className="card-text">
                             License : {project.data.license.spdx_id}
                         </p>}
-
-                    <ProjectLanguages languages={this.props.getProjectLanguages(project.data.full_name)} />
 
                     <div className="row">
                         <div className="col-sm-5">
@@ -67,9 +73,9 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
-        getProjectLanguages: getProjectLanguages
+        getProjectLanguages: getProjectLanguages,
+        getProjectTopics: getProjectTopics
     }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectDetail);
-// export default connect(mapStateToProps)(ProjectDetail);
